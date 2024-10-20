@@ -179,7 +179,6 @@ function SignupPage() {
               <option value=""></option>
               <option value="Patient">Patient</option>
               <option value="Doctor">Doctor</option>
-              <option value="Nurse">Nurse</option>
             </select>
             <label htmlFor="userType">User Type</label>
           </div>

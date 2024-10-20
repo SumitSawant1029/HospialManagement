@@ -49,7 +49,7 @@ export default function Dashboard() {
 							<span className={styles.dashWidgetBg1}><i className="fa fa-stethoscope" aria-hidden="true"></i></span>
 							<div className={[" ", styles.dashWidgetInfo].join(" ")} >
 								<h3 className={styles.dashWidgetInfoH3}>78</h3>
-								<span className={styles.widgetTitle1}>Doctors <i class="fa fa-check" aria-hidden="true"></i></span>
+								<span className={styles.widgetTitle1}>Doctors <i className="fa fa-check" aria-hidden="true"></i></span>
 							</div>
 						</div>
 					</div>
@@ -58,7 +58,7 @@ export default function Dashboard() {
 							<span className={styles.dashWidgetBg2}><i className="fa fa-user-o" aria-hidden="true"></i></span>
 							<div className={[" ", styles.dashWidgetInfo].join(" ")} >
 								<h3 className={styles.dashWidgetInfoH3}>541</h3>
-								<span className={styles.widgetTitle2}>Patients <i class="fa fa-check" aria-hidden="true"></i></span>
+								<span className={styles.widgetTitle2}>Patients <i className="fa fa-check" aria-hidden="true"></i></span>
 							</div>
 						</div>
 					</div>
@@ -67,7 +67,7 @@ export default function Dashboard() {
 							<span className={styles.dashWidgetBg3}><i className=" fa fa-calendar" aria-hidden="true"></i></span>
 							<div className={[" ", styles.dashWidgetInfo].join(" ")} >
 								<h3 className={styles.dashWidgetInfoH3}>22</h3>
-								<span className={styles.widgetTitle3}>Appointments Today <i class="fa fa-check" aria-hidden="true"></i></span>
+								<span className={styles.widgetTitle3}>Appointments Today <i className="fa fa-check" aria-hidden="true"></i></span>
 							</div>
 						</div>
 					</div>
@@ -76,7 +76,7 @@ export default function Dashboard() {
 							<span className={styles.dashWidgetBg4}><i className="fa fa-heartbeat" aria-hidden="true"></i></span>
 							<div className={[" ", styles.dashWidgetInfo].join(" ")} >
 								<h3 className={styles.dashWidgetInfoH3}>22</h3>
-								<span className={styles.widgetTitle4}>Pending Appointments <i class="fa fa-check" aria-hidden="true"></i></span>
+								<span className={styles.widgetTitle4}>Pending Appointments <i className="fa fa-check" aria-hidden="true"></i></span>
 							</div>
 						</div>
 					</div>
@@ -110,11 +110,11 @@ export default function Dashboard() {
 													<p>Dr. Cristina Groves</p>
 												</td>
 												<td>
-													<h5 class="time-title p-0">Timing</h5>
+													<h5 className="time-title p-0">Timing</h5>
 													<p>7.00 PM</p>
 												</td>
-												<td class="text-right">
-													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												<td className="text-right">
+													<a href="appointments.html" className="btn btn-outline-primary take-btn">Take up</a>
 												</td>
 											</tr>
 											<tr>
@@ -127,11 +127,11 @@ export default function Dashboard() {
 													<p>Dr. Cristina Groves</p>
 												</td>
 												<td>
-													<h5 class="time-title p-0">Timing</h5>
+													<h5 className="time-title p-0">Timing</h5>
 													<p>7.00 PM</p>
 												</td>
-												<td class="text-right">
-													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												<td className="text-right">
+													<a href="appointments.html" className="btn btn-outline-primary take-btn">Take up</a>
 												</td>
 											</tr>
 											<tr>
@@ -144,11 +144,11 @@ export default function Dashboard() {
 													<p>Dr. Cristina Groves</p>
 												</td>
 												<td>
-													<h5 class="time-title p-0">Timing</h5>
+													<h5 className="time-title p-0">Timing</h5>
 													<p>7.00 PM</p>
 												</td>
-												<td class="text-right">
-													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												<td className="text-right">
+													<a href="appointments.html" className="btn btn-outline-primary take-btn">Take up</a>
 												</td>
 											</tr>
 											<tr>
@@ -161,11 +161,11 @@ export default function Dashboard() {
 													<p>Dr. Cristina Groves</p>
 												</td>
 												<td>
-													<h5 class="time-title p-0">Timing</h5>
+													<h5 className="time-title p-0">Timing</h5>
 													<p>7.00 PM</p>
 												</td>
-												<td class="text-right">
-													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												<td className="text-right">
+													<a href="appointments.html" className="btn btn-outline-primary take-btn">Take up</a>
 												</td>
 											</tr>
 											<tr>
@@ -178,81 +178,81 @@ export default function Dashboard() {
 													<p>Dr. Cristina Groves</p>
 												</td>
 												<td>
-													<h5 class="time-title p-0">Timing</h5>
+													<h5 className="time-title p-0">Timing</h5>
 													<p>7.00 PM</p>
 												</td>
-												<td class="text-right">
-													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												<td className="text-right">
+													<a href="appointments.html" className="btn btn-outline-primary take-btn">Take up</a>
 												</td>
 											</tr>
 
 
 											{/* <tr>
 												<td style="min-width: 200px;">
-													<a class="avatar" href="profile.html">B</a>
+													<a className="avatar" href="profile.html">B</a>
 													<h2><a href="profile.html">Bernardo Galaviz <span>New York, USA</span></a></h2>
 												</td>                 
 												<td>
-													<h5 class="time-title p-0">Appointment With</h5>
+													<h5 className="time-title p-0">Appointment With</h5>
 													<p>Dr. Cristina Groves</p>
 												</td>
 												<td>
-													<h5 class="time-title p-0">Timing</h5>
+													<h5 className="time-title p-0">Timing</h5>
 													<p>7.00 PM</p>
 												</td>
-												<td class="text-right">
-													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												<td className="text-right">
+													<a href="appointments.html" className="btn btn-outline-primary take-btn">Take up</a>
 												</td>
 											</tr>
 											<tr>
 												<td style="min-width: 200px;">
-													<a class="avatar" href="profile.html">B</a>
+													<a className="avatar" href="profile.html">B</a>
 													<h2><a href="profile.html">Bernardo Galaviz <span>New York, USA</span></a></h2>
 												</td>                 
 												<td>
-													<h5 class="time-title p-0">Appointment With</h5>
+													<h5 className="time-title p-0">Appointment With</h5>
 													<p>Dr. Cristina Groves</p>
 												</td>
 												<td>
-													<h5 class="time-title p-0">Timing</h5>
+													<h5 className="time-title p-0">Timing</h5>
 													<p>7.00 PM</p>
 												</td>
-												<td class="text-right">
-													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												<td className="text-right">
+													<a href="appointments.html" className="btn btn-outline-primary take-btn">Take up</a>
 												</td>
 											</tr>
 											<tr>
 												<td style="min-width: 200px;">
-													<a class="avatar" href="profile.html">B</a>
+													<a className="avatar" href="profile.html">B</a>
 													<h2><a href="profile.html">Bernardo Galaviz <span>New York, USA</span></a></h2>
 												</td>                 
 												<td>
-													<h5 class="time-title p-0">Appointment With</h5>
+													<h5 className="time-title p-0">Appointment With</h5>
 													<p>Dr. Cristina Groves</p>
 												</td>
 												<td>
-													<h5 class="time-title p-0">Timing</h5>
+													<h5 className="time-title p-0">Timing</h5>
 													<p>7.00 PM</p>
 												</td>
-												<td class="text-right">
-													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												<td className="text-right">
+													<a href="appointments.html" className="btn btn-outline-primary take-btn">Take up</a>
 												</td>
 											</tr>
 											<tr>
 												<td style="min-width: 200px;">
-													<a class="avatar" href="profile.html">B</a>
+													<a className="avatar" href="profile.html">B</a>
 													<h2><a href="profile.html">Bernardo Galaviz <span>New York, USA</span></a></h2>
 												</td>                 
 												<td>
-													<h5 class="time-title p-0">Appointment With</h5>
+													<h5 className="time-title p-0">Appointment With</h5>
 													<p>Dr. Cristina Groves</p>
 												</td>
 												<td>
-													<h5 class="time-title p-0">Timing</h5>
+													<h5 className="time-title p-0">Timing</h5>
 													<p>7.00 PM</p>
 												</td>
-												<td class="text-right">
-													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												<td className="text-right">
+													<a href="appointments.html" className="btn btn-outline-primary take-btn">Take up</a>
 												</td>
 											</tr> */}
 										</tbody>
@@ -261,83 +261,83 @@ export default function Dashboard() {
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-lg-4 col-xl-4">
-						<div class="card member-panel">
-							<div class="card-header bg-white">
-								<h4 class="card-title mb-0">Doctors</h4>
+					<div className="col-12 col-lg-4 col-xl-4">
+						<div className="card member-panel">
+							<div className="card-header bg-white">
+								<h4 className="card-title mb-0">Doctors</h4>
 							</div>
-							<div class="card-body">
-								<ul class="contact-list">
+							<div className="card-body">
+								<ul className="contact-list">
 									<li>
-										<div class="contact-cont">
-											<div class="float-left user-img m-r-10">
-												{/* <a href="profile.html" title="John Doe"><span class="status online"></span></a> */}
+										<div className="contact-cont">
+											<div className="float-left user-img m-r-10">
+												{/* <a href="profile.html" title="John Doe"><span className="status online"></span></a> */}
 											</div>
-											<div class="contact-info">
-												<span class="contact-name text-ellipsis">John Doe</span>
-												<span class="contact-date">MBBS, MD</span>
+											<div className="contact-info">
+												<span className="contact-name text-ellipsis">John Doe</span>
+												<span className="contact-date">MBBS, MD</span>
 											</div>
 										</div>
 									</li>
 									<li>
-										<div class="contact-cont">
-											<div class="float-left user-img m-r-10">
-												{/* <a href="profile.html" title="Richard Miles"><span class="status offline"></span></a> */}
+										<div className="contact-cont">
+											<div className="float-left user-img m-r-10">
+												{/* <a href="profile.html" title="Richard Miles"><span className="status offline"></span></a> */}
 											</div>
-											<div class="contact-info">
-												<span class="contact-name text-ellipsis">Richard Miles</span>
-												<span class="contact-date">MD</span>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="contact-cont">
-											<div class="float-left user-img m-r-10">
-												{/* <a href="profile.html" title="John Doe"><span class="status away"></span></a> */}
-											</div>
-											<div class="contact-info">
-												<span class="contact-name text-ellipsis">John Doe</span>
-												<span class="contact-date">BMBS</span>
+											<div className="contact-info">
+												<span className="contact-name text-ellipsis">Richard Miles</span>
+												<span className="contact-date">MD</span>
 											</div>
 										</div>
 									</li>
 									<li>
-										<div class="contact-cont">
-											<div class="float-left user-img m-r-10">
-												{/* <a href="profile.html" title="Richard Miles"><span class="status online"></span></a> */}
+										<div className="contact-cont">
+											<div className="float-left user-img m-r-10">
+												{/* <a href="profile.html" title="John Doe"><span className="status away"></span></a> */}
 											</div>
-											<div class="contact-info">
-												<span class="contact-name text-ellipsis">Richard Miles</span>
-												<span class="contact-date">MS, MD</span>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="contact-cont">
-											<div class="float-left user-img m-r-10">
-												{/* <a href="profile.html" title="John Doe"><span class="status offline"></span></a> */}
-											</div>
-											<div class="contact-info">
-												<span class="contact-name text-ellipsis">John Doe</span>
-												<span class="contact-date">MBBS</span>
+											<div className="contact-info">
+												<span className="contact-name text-ellipsis">John Doe</span>
+												<span className="contact-date">BMBS</span>
 											</div>
 										</div>
 									</li>
 									<li>
-										<div class="contact-cont">
-											<div class="float-left user-img m-r-10">
-												{/* <a href="profile.html" title="Richard Miles"><span class="status away"></span></a> */}
+										<div className="contact-cont">
+											<div className="float-left user-img m-r-10">
+												{/* <a href="profile.html" title="Richard Miles"><span className="status online"></span></a> */}
 											</div>
-											<div class="contact-info">
-												<span class="contact-name text-ellipsis">Richard Miles</span>
-												<span class="contact-date">MBBS, MD</span>
+											<div className="contact-info">
+												<span className="contact-name text-ellipsis">Richard Miles</span>
+												<span className="contact-date">MS, MD</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div className="contact-cont">
+											<div className="float-left user-img m-r-10">
+												{/* <a href="profile.html" title="John Doe"><span className="status offline"></span></a> */}
+											</div>
+											<div className="contact-info">
+												<span className="contact-name text-ellipsis">John Doe</span>
+												<span className="contact-date">MBBS</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div className="contact-cont">
+											<div className="float-left user-img m-r-10">
+												{/* <a href="profile.html" title="Richard Miles"><span className="status away"></span></a> */}
+											</div>
+											<div className="contact-info">
+												<span className="contact-name text-ellipsis">Richard Miles</span>
+												<span className="contact-date">MBBS, MD</span>
 											</div>
 										</div>
 									</li>
 								</ul>
 							</div>
-							<div class="card-footer text-center bg-white">
-								<a href="doctors.html" class="text-muted">View all Doctors</a>
+							<div className="card-footer text-center bg-white">
+								<a href="doctors.html" className="text-muted">View all Doctors</a>
 							</div>
 						</div>
 					</div>

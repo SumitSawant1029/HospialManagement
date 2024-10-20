@@ -109,8 +109,8 @@ export default function AdminDashboard() {
 					<br/>
 					<h4>{currentUser.firstName} {currentUser.lastName}</h4>
 					<br/>
-					<div class={styles.horizontalLine}></div>
-					At DBIT, we believe that every patient deserves the highest quality care possible. 
+					<div className={styles.horizontalLine}></div>
+					At SmartCare, we believe that every patient deserves the highest quality care possible. 
 					<br/>
 					Our commitment to excellence in healthcare is matched only by our compassion for those we serve.
 
@@ -123,7 +123,7 @@ export default function AdminDashboard() {
 						<span className={styles.dashWidgetBg1}><i className="fa fa-stethoscope" aria-hidden="true"></i></span>
 						<div className={[" ", styles.dashWidgetInfo].join(" ")} >
 							<h3 className={styles.dashWidgetInfoH3}>{doctorCount}</h3>
-							<span className={styles.widgetTitle1}>Doctors <i class="fa fa-check" aria-hidden="true"></i></span>
+							<span className={styles.widgetTitle1}>Doctors <i className="fa fa-check" aria-hidden="true"></i></span>
 						</div>
 					</div>
 				</div>
@@ -132,7 +132,7 @@ export default function AdminDashboard() {
 						<span className={styles.dashWidgetBg2}><i className="fa fa-user-o" aria-hidden="true"></i></span>
 						<div className={[" ", styles.dashWidgetInfo].join(" ")} >
 							<h3 className={styles.dashWidgetInfoH3}>{patientCount}</h3>
-							<span className={styles.widgetTitle2}>Patients <i class="fa fa-check" aria-hidden="true"></i></span>
+							<span className={styles.widgetTitle2}>Patients <i className="fa fa-check" aria-hidden="true"></i></span>
 						</div>
 					</div>
 				</div>
@@ -141,7 +141,7 @@ export default function AdminDashboard() {
 						<span className={styles.dashWidgetBg3}><i className=" fa fa-calendar" aria-hidden="true"></i></span>
 						<div className={[" ", styles.dashWidgetInfo].join(" ")} >
 							<h3 className={styles.dashWidgetInfoH3}>{appsTodayCount}</h3>
-							<span className={styles.widgetTitle3}>Appointments Today <i class="fa fa-check" aria-hidden="true"></i></span>
+							<span className={styles.widgetTitle3}>Appointments Today <i className="fa fa-check" aria-hidden="true"></i></span>
 						</div>
 					</div>
 				</div>
@@ -150,7 +150,7 @@ export default function AdminDashboard() {
 						<span className={styles.dashWidgetBg4}><i className="fa fa-heartbeat" aria-hidden="true"></i></span>
 						<div className={[" ", styles.dashWidgetInfo].join(" ")} >
 							<h3 className={styles.dashWidgetInfoH3}>{pendingAppsTodayCount}</h3>
-							<span className={styles.widgetTitle4}>Pending Appointments <i class="fa fa-check" aria-hidden="true"></i></span>
+							<span className={styles.widgetTitle4}>Pending Appointments <i className="fa fa-check" aria-hidden="true"></i></span>
 						</div>
 					</div>
 				</div>
@@ -174,31 +174,27 @@ export default function AdminDashboard() {
 										</tr>
 									</thead>
 									<tbody>
-										{bookedAppointments.map((apt) => {
-											return (
-												<tr>
-													<td className={styles.appointmentTableTd}>
-														<a className="avatar" href="">{apt?.patientId?.userId?.firstName?.charAt(0)}</a>
-														<h2 className='ps-3'><a href="">{apt?.patientId?.userId?.firstName} {apt?.patientId?.userId?.lastName} <span>{apt?.patientId?.address}</span></a></h2>
-													</td>
-													<td>
-														<h5 className="time-title p-0">Appointment With</h5>
-														<p>Dr. {apt?.doctorId?.userId?.firstName} {apt?.doctorId?.userId?.lastName}</p>
-													</td>
-													<td>
-														<h5 class="time-title p-0">Timing</h5>
-														<p>{apt?.appointmentTime}</p>
-													</td>
-													{/* <td class="text-right">
-														<a href="" class="btn btn-outline-primary take-btn">Take up</a>
-													</td> */}
-												</tr>
-											)
-										})
-										}
-
-
+										{bookedAppointments.map((apt) => (
+											<tr key={apt._id}>
+												<td className={styles.appointmentTableTd}>
+													<a className="avatar" href="">{apt?.patientId?.userId?.firstName?.charAt(0)}</a>
+													<h2 className='ps-3'>
+														<a href="">{apt?.patientId?.userId?.firstName} {apt?.patientId?.userId?.lastName} <span>{apt?.patientId?.address}</span></a>
+													</h2>
+												</td>
+												<td>
+													<h5 className="time-title p-0">Appointment With</h5>
+													<p>Dr. {apt?.doctorId?.userId?.firstName} {apt?.doctorId?.userId?.lastName}</p>
+												</td>
+												<td>
+													<h5 className="time-title p-0">Timing</h5>
+													<p>{apt?.appointmentTime}</p>
+												</td>
+											</tr>
+										))}
 									</tbody>
+
+
 								</table>
 								{(!bookedAppointments || bookedAppointments?.length === 0) &&
 									<h3 className='mt-5 text-center '>
@@ -209,33 +205,32 @@ export default function AdminDashboard() {
 						</div>
 					</div>
 				</div>
-				<div class="col-12 col-lg-4 col-xl-4">
-					<div class="card member-panel">
-						<div class="card-header bg-white">
-							<h4 class="card-title mb-0">Doctors</h4>
+				<div className="col-12 col-lg-4 col-xl-4">
+					<div className="card member-panel">
+						<div className="card-header bg-white">
+							<h4 className="card-title mb-0">Doctors</h4>
 						</div>
-						<div class="card-body">
-							<ul class="contact-list">
-								{doctors && doctors.map((doc) => {
-									return (
-										<li>
-											<div class="contact-cont">
-												<div class="float-left user-img m-r-10">
-													{/* <a href="profile.html" title="John Doe"><span class="status online"></span></a> */}
-												</div>
-												<div class="contact-info">
-													<span class="contact-name text-ellipsis">{doc.userId?.firstName} {doc.userId?.lastName}</span>
-													<span class="contact-date">{doc.department} </span>
-												</div>
+						<div className="card-body">
+						<ul className="contact-list">
+							{doctors && doctors.map((doc) => {
+								return (
+									<li key={doc._id}> {/* Assuming each doctor has a unique _id */}
+										<div className="contact-cont">
+											<div className="float-left user-img m-r-10">
+												{/* <a href="profile.html" title="John Doe"><span className="status online"></span></a> */}
 											</div>
-										</li>
-									)
-								})
-								}
+											<div className="contact-info">
+												<span className="contact-name text-ellipsis">{doc.userId?.firstName} {doc.userId?.lastName}</span>
+												<span className="contact-date">{doc.department} </span>
+											</div>
+										</div>
+									</li>
+								)
+							})}
+						</ul>
 
-							</ul>
 						</div>
-						<div class="card-footer text-center bg-white">
+						<div className="card-footer text-center bg-white">
 							<NavLink to="/doctors" className="text-muted">View all Doctors</NavLink>
 						</div>
 					</div>

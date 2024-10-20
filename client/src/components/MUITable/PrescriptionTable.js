@@ -83,16 +83,20 @@ export default function PrecriptionTable({ prescriptionList }) {
     const formatPrescription = (prescribedMed) => {
         return (
             <ul>
-                {prescribedMed.map(pre => (
-                    <li key={pre._id}>
-                        <p>Medicine: {pre.medicineId.name}</p>
-                        <p>Quantity: {pre.qty}</p>
-                        <p>Dosage: {pre.dosage}</p>
-                    </li>
-                ))}
+                {prescribedMed.map(pre => {
+                    console.log(pre); // Log the entire object
+                    return (
+                        <li key={pre._id}>
+                            <p>Medicine: {pre.medicineId ? pre.medicineId.name : "Unknown Medicine"}</p>
+                            <p>Quantity: {pre.qty || "N/A"}</p>
+                            <p>Dosage: {pre.dosage || "N/A"}</p>
+                        </li>
+                    );
+                })}
             </ul>
         );
     }
+    
 
    
     const handlePayment =  async (value) => {
@@ -141,18 +145,24 @@ export default function PrecriptionTable({ prescriptionList }) {
     }
 
     let rows = prescriptionList.map((precription) => {
-
+        const patientName = (precription?.appointmentId?.patientId?.userId?.firstName || "Unknown") + ' ' +
+                           (precription?.appointmentId?.patientId?.userId?.lastName || "Patient");
+    
+        const doctorName = (precription?.appointmentId?.doctorId?.userId?.firstName || "Unknown") + ' ' +
+                           (precription?.appointmentId?.doctorId?.userId?.lastName || "Doctor");
+    
         return createData(
-            precription.appointmentId.patientId.userId.firstName + ' ' + precription.appointmentId.patientId.userId.lastName,
-            precription.appointmentId.doctorId.userId.firstName + ' ' + precription.appointmentId.doctorId.userId.lastName,
-            formatDateForDateInput(precription.appointmentId.appointmentDate),
-            precription.appointmentId.appointmentTime,
-            formatPrescription(precription.prescribedMed),
-            precription.remarks,
-            precription._id,
-            precription.paid
-        )
-    })
+            patientName,
+            doctorName,
+            formatDateForDateInput(precription.appointmentId?.appointmentDate || ""),
+            precription?.appointmentId?.appointmentTime || "",
+            formatPrescription(precription?.prescribedMed || []),
+            precription?.remarks || "",
+            precription?._id || "",
+            precription?.paid || false
+        );
+    });
+    
 
 
     React.useEffect(() => {

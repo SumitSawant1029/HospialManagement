@@ -119,8 +119,8 @@ export default function DoctorDashboard() {
 					<br/>
 					<h4> Dr. {currentUser.firstName} {currentUser.lastName} </h4>
 					<br/>
-					<div class={styles.horizontalLine}></div>
-					At DBIT, we believe that every patient deserves the highest quality care possible. 
+					<div className={styles.horizontalLine}></div>
+					At SmartCare, we believe that every patient deserves the highest quality care possible. 
 					<br/>
 					Our commitment to excellence in healthcare is matched only by our compassion for those we serve.
 
@@ -133,7 +133,7 @@ export default function DoctorDashboard() {
 						<span className={styles.dashWidgetBg1}><i className="fa fa-stethoscope" aria-hidden="true"></i></span>
 						<div className={[" ", styles.dashWidgetInfo].join(" ")} >
 							<h3 className={styles.dashWidgetInfoH3}>78</h3>
-							<span className={styles.widgetTitle1}>Doctor Dashboard <i class="fa fa-check" aria-hidden="true"></i></span>
+							<span className={styles.widgetTitle1}>Doctor Dashboard <i className="fa fa-check" aria-hidden="true"></i></span>
 						</div>
 					</div>
 				</div> */}
@@ -142,7 +142,7 @@ export default function DoctorDashboard() {
                             <span className={styles.dashWidgetBg2}><i className="fa fa-user-o" aria-hidden="true"></i></span>
                             <div className={[" ", styles.dashWidgetInfo].join(" ")} >
                                 <h3 className={styles.dashWidgetInfoH3}>{patientsTreatedCount}</h3>
-                                <span className={styles.widgetTitle2}>Total Patients Treated <i class="fa fa-check" aria-hidden="true"></i></span>
+                                <span className={styles.widgetTitle2}>Total Patients Treated <i className="fa fa-check" aria-hidden="true"></i></span>
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@ export default function DoctorDashboard() {
                             <span className={styles.dashWidgetBg3}><i className=" fa fa-calendar" aria-hidden="true"></i></span>
                             <div className={[" ", styles.dashWidgetInfo].join(" ")} >
                                 <h3 className={styles.dashWidgetInfoH3}>{appsTodayCount}</h3>
-                                <span className={styles.widgetTitle3}>Appointments Today <i class="fa fa-check" aria-hidden="true"></i></span>
+                                <span className={styles.widgetTitle3}>Appointments Today <i className="fa fa-check" aria-hidden="true"></i></span>
                             </div>
                         </div>
                     </div>
@@ -160,7 +160,7 @@ export default function DoctorDashboard() {
                             <span className={styles.dashWidgetBg4}><i className="fa fa-heartbeat" aria-hidden="true"></i></span>
                             <div className={[" ", styles.dashWidgetInfo].join(" ")} >
                                 <h3 className={styles.dashWidgetInfoH3}>{pendingAppsTodayCount}</h3>
-                                <span className={styles.widgetTitle4}>Pending Appointments <i class="fa fa-check" aria-hidden="true"></i></span>
+                                <span className={styles.widgetTitle4}>Pending Appointments <i className="fa fa-check" aria-hidden="true"></i></span>
                             </div>
                         </div>
                     </div>
@@ -196,11 +196,11 @@ export default function DoctorDashboard() {
 														<p>Dr. {apt?.doctorId?.userId?.firstName} {apt?.doctorId?.userId?.lastName}</p>
 													</td>
 													<td>
-														<h5 class="time-title p-0">Timing</h5>
+														<h5 className="time-title p-0">Timing</h5>
 														<p>{apt?.appointmentTime}</p>
 													</td>
-													{/* <td class="text-right">
-														<a href="" class="btn btn-outline-primary take-btn">Take up</a>
+													{/* <td className="text-right">
+														<a href="" className="btn btn-outline-primary take-btn">Take up</a>
 													</td> */}
 												</tr>
 											)
@@ -220,24 +220,24 @@ export default function DoctorDashboard() {
 						</div>
 					</div>
 				</div>
-				<div class="col-12 col-lg-4 col-xl-4">
-					<div class="card member-panel">
-						<div class="card-header bg-white">
-							<h4 class="card-title mb-0">Completed Appointments</h4>
+				<div className="col-12 col-lg-4 col-xl-4">
+					<div className="card member-panel">
+						<div className="card-header bg-white">
+							<h4 className="card-title mb-0">Completed Appointments</h4>
 						</div>
-						<div class="card-body">
-							<ul class="contact-list">
+						<div className="card-body">
+							<ul className="contact-list">
 								
 									{prescriptions && prescriptions.map((pre) => {
 											return (
 												<li>
-													<div class="contact-cont">
-														<div class="float-left user-img m-r-10">
-															{/* <a href="profile.html" title="John Doe"><span class="status online"></span></a> */}
+													<div className="contact-cont">
+														<div className="float-left user-img m-r-10">
+															{/* <a href="profile.html" title="John Doe"><span className="status online"></span></a> */}
 														</div>
-														<div class="contact-info">
-															<span class="contact-name text-ellipsis">{pre.appointmentId.patientId.userId.firstName} {pre.appointmentId.patientId.userId.lastName}</span>
-															<span class="contact-date">Remarks: {pre.remarks}</span>
+														<div className="contact-info">
+															<span className="contact-name text-ellipsis">{pre.appointmentId.patientId.userId.firstName} {pre.appointmentId.patientId.userId.lastName}</span>
+															<span className="contact-date">Remarks: {pre.remarks}</span>
 														</div>
 													</div>
 												</li>
@@ -247,7 +247,7 @@ export default function DoctorDashboard() {
 									
 							</ul>
 						</div>
-						<div class="card-footer text-center bg-white">
+						<div className="card-footer text-center bg-white">
 							<NavLink to="/prescriptions" className="text-muted">View all </NavLink>
 						</div>
 					</div>
